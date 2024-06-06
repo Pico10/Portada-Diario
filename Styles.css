@@ -1,4 +1,4 @@
-Estilos globales */
+/* Estilos globales */
 * {
     margin: 0;
     padding: 0;
@@ -99,19 +99,27 @@ h3 {
     color: #01110d; /* Nuevo color para H3 */
 }
 
-
+/* Estilos de las publicidades */
 .advertisements {
     width: 90%;
-    margin: 1rem 0;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre los anuncios */
+    margin: 1rem 0;
 }
 
 .ad {
     background-color: #ccc;
-    margin: 0.5rem 0;
     padding: 1rem;
     text-align: center;
+    flex: 1;
+    max-width: calc(50% - 1rem); /* Ajustar el ancho máximo */
+    box-sizing: border-box;
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Media Queries para tabletas y escritorios */
@@ -141,6 +149,7 @@ h3 {
 
     .advertisements {
         order: 2;
+        flex-direction: row;
     }
 }
 
@@ -153,25 +162,23 @@ h3 {
     .advertisements {
         width: 25%;
     }
+}
 
-}.main-news h2 a {
+.main-news h2 a {
     text-decoration: none;
     color: black;
     margin-top: 100%; /* Ajusta este valor para acercar el título a la imagen */
 }
 
-.secondary-news 
-.news-item h3  a  {
+.secondary-news .news-item h3 a {
     text-decoration: none;
     color: #01110d;
 }
 
-news-item img {
+.news-item img {
     max-width: 180%;
     height: auto;
 }
-
-
 
 .main-news .news-item {
     display: flex;
@@ -181,5 +188,14 @@ news-item img {
 
 .main-news .news-item img {
     margin-bottom: 10.5rem; /* Ajusta este valor para mover la imagen más arriba o abajo */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f4;
 }
 
