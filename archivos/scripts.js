@@ -42,6 +42,18 @@ document.addEventListener('DOMContentLoaded', function () {
         const error = validationRules[field.id](field.value);
         const errorElement = document.getElementById(`error-${field.id}`);
         if (error) {
-            errorElement
-        
+            errorElement.innerText = error;
+            return false;
+        } else {
+            errorElement.innerText = '';
+            return true;
+        }
+    }
+
+    function clearError(event) {
+        const field = event.target;
+        const errorElement = document.getElementById(`error-${field.id}`);
+        errorElement.innerText = '';
+    }
+});
 
